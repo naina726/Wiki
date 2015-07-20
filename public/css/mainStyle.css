@@ -1,0 +1,85 @@
+html{
+	padding: 0;
+	margin: 0;
+	background-color: black;
+	font-family: 'Palatino Linotype';
+}
+.header{
+	position: absolute;
+	background-color: black;
+	display: inline-block;
+}
+.logo{
+	height: 60px;
+	padding: 14px;
+	margin-left: 5px;
+}
+.header form{
+	position: absolute;
+	float: right;
+	left: 1100px;
+	top: 25px;
+}
+.header input{
+	height: 25px;
+	width: 240px;
+	text-align: center;
+	font-size: 1em;
+}
+.header button{
+	padding: 0 5px 0px 5px;
+	font-size: 1.5em;
+	color: #FFC0CB;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 30%;
+	top: 0px;
+	left: 260px;
+	position: absolute;
+	border-color: darkgrey;
+}
+.linkz{
+	position: absolute;
+	font-weight: bold;
+	font-size: 1.4em;
+	top: 25px;
+	display: inline-block;
+	width: 140px;
+} 
+.one{
+	left: 1430px;
+}
+.two{
+	left: 1570px;
+}
+
+
+.logoBig{
+	position: absolute;
+	height: 200px;
+	left: 45%;
+	top: 15%;
+}
+.initLink{
+	position: absolute;
+	text-align: center;
+	font-size: 3em;
+
+}
+.signupLink{
+	position: absolute;
+	left: 660px;
+	top: 400px;
+}
+
+.loginLink{
+	position: absolute;
+	top: 500px;
+	left: 620px;
+}
+
+
+.content {
+	position: absolute;
+	/*top: 98px;*/
+	top: 200px;
+}

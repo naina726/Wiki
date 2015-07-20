@@ -9,6 +9,9 @@ var exphbs         = require('express-handlebars');
 var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
 var fs             = require('fs');
+var session        = require('express-session');
+var bcrypt         = require('bcrypt');
+
 
 app.listen(3000);
 app.use(logger("dev"));
@@ -26,6 +29,14 @@ app.use(methodOverride(function(req, res){
    return method
  }
 }));
+app.use(session({
+  secret: 'nainasWiki',
+  saveUninitialized: false,
+  resave: false
+}));
+
+
+
 //Controllers
 fs.readdirSync('./controllers').forEach(function (file) {
  if(file.substr(-3) == '.js') {
@@ -39,5 +50,14 @@ fs.readdirSync('./controllers').forEach(function (file) {
 //     ROOT
 ///////////////////////////////////////////////////////////////////////////
 app.get('/', function (req, res){
-	res.render('home');
+	res.render('splash');
+});
+
+app.get('/home', function (req, res){
+	if(req.session.currentUser = null){
+		res.redirect('/');
+	}
+	else{
+		res.render('home')
+	}
 });

@@ -1,0 +1,16 @@
+a{
+	text-decoration: none;
+	color: #FFC0CB;
+}
+a:hover{
+	text-decoration: none;
+	color: white;
+}
+a:visited{
+	text-decoration: none;
+	color: #FFC0CB;
+}
+a:active{
+	text-decoration: none;
+	color: white;
+}

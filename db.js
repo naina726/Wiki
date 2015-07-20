@@ -84,6 +84,23 @@ module.exports = {
             });
         });
         this.end();
+    },
+    getUser: function (string, cb){
+    	pg.connect(dbUrl, function (err, client, done){
+    		if (err) {throw err};
+    		var query = 'SELECT * FROM users WHERE email = ($1)';
+    		client.query(query, [string], function (err, result){
+    			done();
+    			cb(result.rows[0]);
+    		})
+    	})
+    	this.end();
     }
-    
 };
+
+
+
+
+
+
+
