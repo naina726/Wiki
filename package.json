@@ -1,0 +1,29 @@
+{
+  "name": "wiki",
+  "version": "1.0.0",
+  "description": "Test",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naina726/Wiki.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naina726/Wiki/issues"
+  },
+  "homepage": "https://github.com/naina726/Wiki#readme",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "express": "^4.13.1",
+    "express-handlebars": "^2.0.1",
+    "fs": "0.0.2",
+    "method-override": "^2.3.4",
+    "morgan": "^1.6.1",
+    "pg": "^4.4.0"
+  }
+}
