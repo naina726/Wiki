@@ -74,6 +74,17 @@ a:active{
 	font-size: 1.5em;	
 	text-align: center;
 }
+.bigView button{
+	position: absolute;
+	bottom: -550px;
+	height: 100px;
+	width: 200px;
+	font-size: 2em;
+	background-color: #FFC0CB;
+	border-radius: 50px;
+	color: black;
+	left: 180px;
+}
 
 /* NEW FORM */
 .newPostForm form{
