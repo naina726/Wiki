@@ -17,12 +17,12 @@ html{
 .header form{
 	position: absolute;
 	float: right;
-	left: 1100px;
+	left: 940px;
 	top: 25px;
 }
 .header input{
 	height: 25px;
-	width: 240px;
+	width: 260px;
 	text-align: center;
 	font-size: 1em;
 }
@@ -33,7 +33,7 @@ html{
 	background-color: rgba(0,0,0,0.5);
 	border-radius: 30%;
 	top: 0px;
-	left: 260px;
+	left: 280px;
 	position: absolute;
 	border-color: darkgrey;
 }
@@ -51,7 +51,14 @@ html{
 .two{
 	left: 1570px;
 }
-
+.goback{
+	width: 160px;
+	left: 1270px;
+}
+.goback:hover{
+	text-decoration: none;
+	color: #FFC0CB;
+}
 
 .logoBig{
 	position: absolute;

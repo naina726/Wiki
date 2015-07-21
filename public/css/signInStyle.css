@@ -1,0 +1,35 @@
+.logintitle{
+	font-size: 4em;
+	text-align: center;
+	color: #FFC0CB;
+	margin-top: 60px;
+}
+
+
+.loginform form{
+	position: absolute;
+	left: 580px;
+}
+
+
+.loginform input{
+	margin: 10px 20px 20px 20px;
+	height: 100px;
+	width: 500px;
+	font-size: 2em;
+	text-align: center;
+	border-radius: 50px;
+	left: 300px;
+}
+
+.loginform button{
+	position: absolute;
+	margin-top: 20px;
+	height: 100px;
+	width: 200px;
+	font-size: 2em;
+	background-color: #FFC0CB;
+	border-radius: 50px;
+	color: black;
+	left: 170px;
+}

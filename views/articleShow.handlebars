@@ -12,13 +12,8 @@
       
 </div>
 
-<div class="allPosts">
-	<h1>ALL POSTS</h1>
-	{{#each articles}}
-		<div class="single_box">
-			<h3>
-				<a href="/articles/{{id}}">{{title}}</a>
-			</h3>
-		</div>
-	{{/each}}
+<div class="bigView">
+	<h3>{{articles.title}}</h3>
+	<p class="content">{{articles.content}}</p>
 </div>
+

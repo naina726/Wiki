@@ -1,16 +1,84 @@
 a{
 	text-decoration: none;
-	color: #FFC0CB;
+	color: white;
 }
 a:hover{
 	text-decoration: none;
-	color: white;
+	color: #FFC0CB;
 }
 a:visited{
 	text-decoration: none;
-	color: #FFC0CB;
+	color: white;
 }
 a:active{
 	text-decoration: none;
-	color: white;
+	color: #FFC0CB;
 }
+
+
+.allPosts{
+	position: absolute;
+	top: 130px;
+	background-color: rgba(70, 70, 70, .5);
+	text-align: center;
+	left: 470px;
+	border: 5px solid #FFC0CB;
+	border-radius: 30px;
+	padding-bottom: 30px;
+}
+.allPosts h1{
+	color: white;
+	font-size: 3.5em;
+}
+
+.single_box{
+	border: 3px solid white;
+	color: white;
+	text-align: center;
+	padding: 25px;
+	width: 700px;
+	height: 100px;
+	margin: 20px 40px 20px 40px;
+	padding-top: 40px;
+	border-radius: 30px;
+}
+.single_box a{
+	text-decoration: none;
+	color: #FFC0CB;
+	font-size: 2em;
+}
+
+.bigView{
+	position: absolute;
+	top: 130px;
+	background-color: rgba(70, 70, 70, .5);
+	text-align: center;
+	left: 470px;
+	border: 5px solid #FFC0CB;
+	border-radius: 30px;
+	padding-bottom: 30px;
+	width: 700px;
+	height: 600px;
+}
+.bigView h3{
+	text-decoration: none;
+	color: #FFC0CB;
+	font-size: 3em;
+	margin-top: 40px;
+}
+
+.bigView p{
+	color: white;
+	margin: 0px 60px 20px 60px;
+	top: 160px;
+	font-size: 1.5em;	
+	text-align: center;
+}
+
+
+
+
+
+
+
+

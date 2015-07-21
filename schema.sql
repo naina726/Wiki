@@ -18,12 +18,6 @@ CREATE TABLE categories(
 CREATE TABLE articles(
 	id SERIAL PRIMARY KEY,
 	title VARCHAR(255),
-	content TEXT,
-	img_url VARCHAR(255),
-	cat_id INTEGER references categories,
-	creation_date DATE NOT NULL default CURRENT_DATE,
-	creation_user INTEGER references users,
-	editing_date DATE,
-	editing_user INTEGER references users
+	content TEXT
 );
 
