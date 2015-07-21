@@ -1,7 +1,8 @@
 /* BUILDING AN ORM */
 
 var pg = require('pg');
-var dbUrl = "pg://localhost/wiki_db";
+//var dbUrl = "pg://localhost/wiki_db";
+var dbUrl = process.env.DATABASE_URL;
 
 module.exports = {
 	end: function(){

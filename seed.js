@@ -1,2 +1,1 @@
-var db = require('./db.js');
-
+INSERT INTO users (first_name, last_name, email, password) VALUES ()

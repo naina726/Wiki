@@ -12,8 +12,13 @@ var fs             = require('fs');
 var session        = require('express-session');
 var bcrypt         = require('bcrypt');
 
+app.set('port', (process.env.PORT || 3000));
+app.listen(app.get('port'), function () {
+  console.log("App running on port : ", app.get('port'));
+});
+//app.listen(3000);
 
-app.listen(3000);
+
 app.use(logger("dev"));
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
