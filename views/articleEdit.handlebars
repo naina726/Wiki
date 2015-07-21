@@ -1,5 +1,5 @@
 <div class="header">
-    <a href="/home"><img class="logo" src="../img/star.png"/></a>
+    <a href="/home"><img class="logo" src="../../img/star.png"/></a>
 
 	<form action='/search' method="POST">
 		<input type="text" name="searchBar" placeholder="search">
@@ -13,20 +13,22 @@
 
 
 
+
+
 <div class='editPostForm'>
 
-	<form action='/articles' method="POST">
-		<input type="text" name="title" value={{title}}><br>
-		<select required>
+	<form action='/articles/{{id}}' method="POST">
+		<input type="hidden" name="_method" value="PUT">
+		<input type="text" name="title" value="{{title}}"><br>
+		<select required name= "cat_id">
 		  <option value="">Select a category</option>
-		  <option value="html">HTML</option>
-		  <option value="css">CSS</option>
-		  <option value="javascript">JavaScript</option>
-		  <option value="sql">SQL</option>
-	 	  <option value="github">GitHub</option>
-		  <option value="node">Node.js</option>
+		  <option value='1'>home</option>
+		  <option value='2'>family</option>
+		  <option value='3'>social</option>
+		  <option value='4'>school</option>
+	 	  <option value='5'>work</option>
 		</select>
-		<textarea class="bigBox" value={{content}} style="width: 500px; height: 350px;"></textarea>
+		<textarea class="bigBox" name="content" style="width: 500px; height: 350px;">{{content}}</textarea>
 		<button>Post</button><br>
 	</form>
 

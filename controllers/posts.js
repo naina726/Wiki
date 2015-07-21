@@ -51,8 +51,9 @@ module.exports.controller = function(app){
 	app.get('/articles/edit/:id', function (req, res) {
   		db.find('articles', req.params.id, function (articles) {
     		var data = {
-      			articles: articles
-    	}
+      			articles: articles,
+      			creation_user: req.session.currentUser
+    		}
     	console.log(data)
     	res.render('articleEdit', articles[0]);
   		});

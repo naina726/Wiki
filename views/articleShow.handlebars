@@ -13,7 +13,9 @@
 
 <div class="bigView">
 	<h3>{{articles.title}}</h3>
-	<p class="content">{{articles.content}}</p>
-	<a href='/articles/edit/{{id}}'><button>Edit</button></a>
+	<p class="content">{{articles.content}}<br>{{articles.creation_date}}</p>
+	<div class="fuckthis">
+		<a href='/articles/edit/{{articles.id}}'><button>Edit</button></a>
+	</div>
 </div>
 

@@ -85,6 +85,11 @@ a:active{
 	color: black;
 	left: 180px;
 }
+.fuckthis button{
+	position: absolute;
+	bottom: -110px;
+	left: 235px;
+}
 
 /* NEW FORM */
 .newPostForm form{

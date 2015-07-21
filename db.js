@@ -1,8 +1,8 @@
 /* BUILDING AN ORM */
 
 var pg = require('pg');
-//var dbUrl = "pg://localhost/wiki_db";
-var dbUrl = process.env.DATABASE_URL;
+var dbUrl = "pg://localhost/wiki_db";
+//var dbUrl = process.env.DATABASE_URL;
 
 module.exports = {
 	end: function(){
@@ -11,6 +11,7 @@ module.exports = {
 	all: function(table, cb){
 		pg.connect(dbUrl, function (err, client, done){
 			client.query('SELECT * FROM ' + table, function (err, result){
+				if (err) {throw err};
 				done();
 				cb(result.rows);
 			});
@@ -34,8 +35,10 @@ module.exports = {
 	},
 	findRelations: function (table, column, id, cb){
 		pg.connect(dbUrl, function (err, client, done){
+			if (err) {throw err};
 
 			client.query('SELECT * FROM ' + table + ' WHERE ' + table + '.' + column + ' = ' + id, function (err, result){
+				if (err) {throw err};
 				done();
 				cb(result.rows);
 			});
@@ -44,7 +47,9 @@ module.exports = {
 	},
 	delete: function (table, id, cb){
 		pg.connect(dbUrl, function (err, client, done){
+			if (err) {throw err};
 			client.query('DELETE FROM ' + table + ' WHERE id=' + id, function (err, result){
+				if (err) {throw err};
 				done();
 				cb(result);
 			});
@@ -53,6 +58,7 @@ module.exports = {
 	},
 	create: function (table, obj, cb){
 		pg.connect(dbUrl, function (err, client, done){
+			if (err) {throw err};
 			var columns = [];
 			var values = [];
 			var dollars = [];
@@ -63,6 +69,7 @@ module.exports = {
 			});
 			var query = 'INSERT INTO ' + table + '(' + columns.join(', ') + ') VALUES (' + dollars.join(', ') + ') RETURNING id AS id';
 			client.query(query, values, function (err, result){
+				if (err) {throw err};
 				done();
 				cb(result.rows[0]);
 			});
@@ -70,6 +77,7 @@ module.exports = {
 		this.end();
 	},
 	update: function (table, obj, id, cb) {
+		if (err) {throw err};
         pg.connect(dbUrl, function (err, client, done) {
             var columns = [];
             var set     = [];
@@ -80,6 +88,7 @@ module.exports = {
                 values.push(obj[columns[i]]);
             });
             client.query('UPDATE ' + table + ' SET ' + set.join(', ') + ' WHERE id = ' + id, values, function (err, result) {
+            	if (err) {throw err};
                 done();
                 cb(result);
             });
@@ -87,10 +96,12 @@ module.exports = {
         this.end();
     },
     getUser: function (string, cb){
+    	if (err) {throw err};
     	pg.connect(dbUrl, function (err, client, done){
     		if (err) {throw err};
     		var query = 'SELECT * FROM users WHERE email = ($1)';
     		client.query(query, [string], function (err, result){
+    			if (err) {throw err};
     			done();
     			cb(result.rows[0]);
     		})
@@ -98,6 +109,7 @@ module.exports = {
     	this.end();
     },
     findMine: function(id, cb){
+    	if (err) {throw err};
 		pg.connect(dbUrl, function (err, client, done){
 			if (err) {throw err};
 
@@ -113,6 +125,7 @@ module.exports = {
 		this.end();
 	},
     findSearch: function(string, cb){
+    	if (err) {throw err};
 		pg.connect(dbUrl, function (err, client, done){
 			if (err) {throw err};
 
