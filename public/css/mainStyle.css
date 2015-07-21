@@ -1,3 +1,5 @@
+/* NAV BAR // MAIN STUFF */
+
 html{
 	padding: 0;
 	margin: 0;
@@ -17,7 +19,7 @@ html{
 .header form{
 	position: absolute;
 	float: right;
-	left: 940px;
+	left: 120px;
 	top: 25px;
 }
 .header input{
@@ -48,12 +50,16 @@ html{
 .one{
 	left: 1430px;
 }
+.one:hover{
+	color: #FFC0CB;
+}
 .two{
 	left: 1570px;
+	text-decoration: underline;
 }
 .goback{
 	width: 160px;
-	left: 1270px;
+	left: 1265px;
 }
 .goback:hover{
 	text-decoration: none;
@@ -82,6 +88,14 @@ html{
 	position: absolute;
 	top: 500px;
 	left: 620px;
+}
+.newPostLink{
+	left: 1150px;
+
+}
+.newPostLink:hover{
+	text-decoration: none;
+	color: #FFC0CB;
 }
 
 

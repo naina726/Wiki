@@ -1,0 +1,36 @@
+<div class="header">
+    <a href="/home"><img class="logo" src="../img/star.png"/></a>
+
+	<form action='/search' method="POST">
+		<input type="text" name="searchBar" placeholder="search">
+		<button>&#x2605;</button>
+	</form>
+	<a class="linkz newPostLink" href='/articles/new'>New post</a>
+	<a class="linkz goback" href='/home'>View all posts</a>
+	<a class="linkz one" href='/account'>My posts</a>
+	<a class="linkz two" href='/logout'>Log out</a>
+</div>
+
+<div class='newPostForm'>
+
+	<form action='/articles' method="POST">
+		<input type="text" name="title" placeholder="title"><br>
+		
+		<select class='optionMenu'>
+		  <option value="">Select a category</option>
+		  <option value="html">HTML</option>
+		  <option value="css">CSS</option>
+		  <option value="javascript">JavaScript</option>
+		  <option value="sql">SQL</option>
+	 	  <option value="github">GitHub</option>
+		  <option value="node">Node.js</option>
+		</select>
+
+		<textarea class="bigBox" name="content" placeholder="content" style="width: 500px; height: 350px;"></textarea>
+
+		<button>Post</button><br>
+	</form>
+
+</div>
+
+

@@ -95,12 +95,38 @@ module.exports = {
     		})
     	})
     	this.end();
-    }
+    },
+    findMine: function(id, cb){
+		pg.connect(dbUrl, function (err, client, done){
+			if (err) {throw err};
+
+			var query = 'SELECT * FROM articles WHERE creation_user =' + id;
+				console.log(query);
+
+			client.query(query, function (err, result){
+				if (err) {throw err};
+				done();
+				cb(result.rows)
+			});
+		});
+		this.end();
+	},
+    findSearch: function(string, cb){
+		pg.connect(dbUrl, function (err, client, done){
+			if (err) {throw err};
+
+			var query = 'SELECT * FROM articles WHERE title LIKE %($1)% OR content LIKE %($1)%';
+				console.log(query);
+
+			client.query(query, [string], function (err, result){
+				if (err) {throw err};
+				done();
+				cb(result.rows)
+			});
+		});
+		this.end();
+	}
+
 };
-
-
-
-
-
 
 

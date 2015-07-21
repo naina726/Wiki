@@ -1,0 +1,12 @@
+TO GO BACK INTO ARTICLES TABLE
+
+PENDING PROBLEMS:
+logout/login is unclear and can access hard routes without being logged in
+where to put logout delete form
+edit form  textbox does not displat value
+displaying name and date 
+
+
+1. fill in database stuff - select, dates, user id
+2. 
+3. comments.

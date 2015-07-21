@@ -15,7 +15,7 @@ a:active{
 	color: #FFC0CB;
 }
 
-
+/* DISPLAY ALL */
 .allPosts{
 	position: absolute;
 	top: 130px;
@@ -47,7 +47,7 @@ a:active{
 	color: #FFC0CB;
 	font-size: 2em;
 }
-
+/*DISPLAY ONE */
 .bigView{
 	position: absolute;
 	top: 130px;
@@ -75,8 +75,107 @@ a:active{
 	text-align: center;
 }
 
+/* NEW FORM */
+.newPostForm form{
+	position: absolute;
+	top: 100px;
+	left: 580px;
+}
+
+.newPostForm input{
+	margin: 10px 20px 10px 20px;
+	height: 100px;
+	width: 500px;
+	font-size: 2em;
+	text-align: center;
+	border-radius: 50px;
+	left: 300px;
+}
+
+.newPostForm select{
+	position: absolute; 
+	margin: 10px 20px 10px 20px;
+	height: 30px;
+	width: 200px;
+	font-size: 1em;
+	text-align: center;
+	border-radius: 50px;
+	left: 155px;
+}
+
+.bigBox{
+	position: absolute;
+	border-radius: 50px;
+	font-size: 1.5em;
+	text-align: center;
+	left: 20px;
+	padding-top: 50px;
+	top: 180px;
+}
+.newPostForm button{
+	position: absolute;
+	bottom: -550px;
+	height: 100px;
+	width: 200px;
+	font-size: 2em;
+	background-color: #FFC0CB;
+	border-radius: 50px;
+	color: black;
+	left: 180px;
+}
 
 
+
+.editPostForm form{
+	position: absolute;
+	top: 120px;
+	left: 580px;
+}
+
+.editPostForm input{
+	margin: 10px 20px 10px 20px;
+	height: 100px;
+	width: 500px;
+	font-size: 2em;
+	text-align: center;
+	border-radius: 50px;
+	left: 300px;
+}
+
+.editPostForm select{
+	position: absolute; 
+	margin: 10px 20px 10px 20px;
+	height: 30px;
+	width: 200px;
+	font-size: 1em;
+	text-align: center;
+	border-radius: 50px;
+	left: 155px;
+}
+
+.editPostForm button{
+	position: absolute;
+	bottom: -560px;
+	height: 100px;
+	width: 200px;
+	font-size: 2em;
+	background-color: #FFC0CB;
+	border-radius: 50px;
+	color: black;
+	left: 290px;
+}
+.delButton{
+	position: absolute;
+	bottom: 20px;
+	height: 100px;
+	width: 200px;
+	font-size: 2em;
+	background-color: white;
+	border-radius: 50px;
+	border: 3px solid #FFC0CB;
+	color: black;
+	left: 650px;
+}
 
 
 

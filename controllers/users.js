@@ -10,6 +10,17 @@ module.exports.controller = function(app){
 		res.render('signupForm');
 	});
 
+	app.get('/account', function (req, res){
+		db.findMine(req.session.currentUser, function (data){
+			var articles = {
+				articles: data
+			};
+			console.log(articles);
+			res.render('account', articles);
+	    });
+	});
+
+
 	app.post('/signup', function (req, res){
 		bcrypt.hash(req.body.password, 10, function (err, hash){
 			var newUser = {
@@ -48,5 +59,6 @@ module.exports.controller = function(app){
 		req.session.currentUser = null;
 		res.redirect('/');
 	})
+
 
 }

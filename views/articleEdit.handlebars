@@ -1,0 +1,39 @@
+<div class="header">
+    <a href="/home"><img class="logo" src="../img/star.png"/></a>
+
+	<form action='/search' method="POST">
+		<input type="text" name="searchBar" placeholder="search">
+		<button>&#x2605;</button>
+	</form>
+	<a class="linkz newPostLink" href='/articles/new'>New post</a>
+	<a class="linkz goback" href='/home'>View all posts</a>
+	<a class="linkz one" href='/account'>My posts</a>
+	<a class="linkz two" href='/logout'>Log out</a>
+</div>
+
+
+
+<div class='editPostForm'>
+
+	<form action='/articles' method="POST">
+		<input type="text" name="title" value={{title}}><br>
+		<select required>
+		  <option value="">Select a category</option>
+		  <option value="html">HTML</option>
+		  <option value="css">CSS</option>
+		  <option value="javascript">JavaScript</option>
+		  <option value="sql">SQL</option>
+	 	  <option value="github">GitHub</option>
+		  <option value="node">Node.js</option>
+		</select>
+		<textarea class="bigBox" value={{content}} style="width: 500px; height: 350px;"></textarea>
+		<button>Post</button><br>
+	</form>
+
+</div>
+
+
+<form action="/articles/{{id}}" method="POST" style="clear: left; text-align: center;">
+	<input type="hidden" name="_method" value="DELETE">
+	<button class="delButton">Delete</button>
+</form>
